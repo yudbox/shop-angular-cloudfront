@@ -55,9 +55,9 @@ phases:
       - aws s3 cp dist/app s3://${S3_BUCKET} --recursive
 
       # Create CloudFront invalidation (which actually clears cache):
-      - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/*"
+      # - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/*"
 
-      - echo Application deployment is successfully completed on `date`
+      # - echo Application deployment is successfully completed on `date`
 
 artifacts:
   files:
